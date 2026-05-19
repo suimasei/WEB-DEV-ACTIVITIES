@@ -1,3 +1,4 @@
+/* Global reset and base layout */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -13,7 +14,7 @@ body {
     padding: 60px 20px;
 }
 
-
+/* Header container tracking */
 .site-header {
     max-width: 800px;
     margin: 0 auto 60px auto;
@@ -37,6 +38,7 @@ body {
     letter-spacing: 2px;
 }
 
+/* Navigation button links */
 .main-nav {
     display: flex;
     gap: 6px;
@@ -66,6 +68,7 @@ hr {
     display: none; 
 }
 
+/* Core content profile wrappers */
 .content-wrapper {
     max-width: 800px;
     margin: 0 auto;
@@ -109,7 +112,7 @@ hr {
     margin-bottom: 30px;
 }
 
-
+/* Dynamic portfolio/hobbies grid */
 .hobbies-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -142,6 +145,7 @@ hr {
     font-size: 0.95rem;
 }
 
+/* Contact form structure */
 .responsive-form {
     display: flex;
     flex-direction: column;
@@ -186,7 +190,7 @@ hr {
     border-color: #0f172a; 
 }
 
-
+/* Action submit button configuration */
 .btn-submit {
     background: linear-gradient(90deg, #42a1af, #78a8cf); 
     color: #ffffff;
@@ -206,6 +210,7 @@ hr {
     opacity: 0.9; 
 }
 
+/* Desktop adaptive breakpoints */
 @media screen and (min-width: 650px) {
     .header-container {
         flex-direction: row;
@@ -218,6 +223,7 @@ hr {
     }
 }
 
+/* Footer layout registration */
 .site-footer {
     max-width: 800px;
     margin: 80px auto 0 auto;
