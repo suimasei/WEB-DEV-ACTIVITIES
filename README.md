@@ -6,11 +6,9 @@ Welcome to my personal student profile project repository! This project showcase
 
 ## 👤 Profile Registry
 
-<div align="center">
   <h3>Zyann Kyle Condino</h3>
   <p><strong>Course:</strong> 2nd Year BSIT</p>
   <p><strong>Institution:</strong> National Teachers College (NTC)</p>
-</div>
 
 ---
 
