@@ -1,17 +1,34 @@
-# Web Development Activities 🌐
+# 🌐 WEB-DEV-ACTIVITIES
 
-Welcome to my personal student profile project! This repository contains my basic web profile built using HTML and formatted with an external CSS layout.
+Welcome to my personal student profile project repository! This project showcases the fundamental application of structuring clean HTML5 elements and formatting modern semantic layouts using external CSS style sheets.
 
-## 👤 About Me
-* **Name:** Zyann Kyle Condino
-* **Course:** 2nd Year BSIT
-* **Institution:** National Teachers College (NTC)
+---
 
-## 🛠️ Tech Stack
-* **HTML5** - Structure of the website
-* **CSS3** - Clean, minimalist styling with custom spacing
+## 👤 Profile Registry
 
-## 📄 Project Pages
-* `index.html` - Home / Biography & Hobbies page
-* `contact.html` - Contact page with a structured layout form
-* `style.css` - External stylesheet for unified presentation
+<div align="center">
+  <h3>Zyann Kyle Condino</h3>
+  <p><strong>Course:</strong> 2nd Year BSIT</p>
+  <p><strong>Institution:</strong> National Teachers College (NTC)</p>
+</div>
+
+---
+
+## 🛠️ Developmental Tech Stack
+
+* **HTML5** - Semantic structural layout architecture across multiple profile channels.
+* **CSS3** - Unified design rules, flexible card layouts, and adaptive user inputs.
+
+---
+
+## 📂 Repository File Blueprint
+
+This repository is comprised of the following core deployment assets:
+
+* `home.html` / `index.html` — The main interface hosting the primary overview and technical inventories.
+* `about.html` — Extended personal background biography tracking data structures and platform mastery.
+* `contact.html` / `contact1.html` — Symmetric contact interface featuring centered interactive response forms.
+* `style.css` / `style1.css` — Core style sheets engine configuring global layouts, dark violet tints, and adaptive rules.
+
+---
+
