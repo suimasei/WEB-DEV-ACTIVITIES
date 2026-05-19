@@ -7,8 +7,8 @@
 
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background-color: #ffffff; 
-    background-image: radial-gradient(at 100% 0%, rgba(6, 182, 212, 0.05) 0px, transparent 40%);
+    background-color: #f1f5f9; /* Naglagay ng solid tech slate light gray background */
+    background-image: radial-gradient(at 100% 0%, rgba(99, 102, 241, 0.06) 0px, transparent 40%);
     color: #0f172a;
     line-height: 1.6;
     padding: 60px 20px;
@@ -21,17 +21,18 @@ body {
 }
 
 .header-container {
-    background-color: #f8fafc;
+    background-color: #ffffff; /* Ginawang puti para umangat sa bagong background color */
     border-radius: 100px;    
     padding: 8px 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 8px;
+    border: 1px solid #e2e8f0;
 }
 
 .nav-label {
-    color: #0891b2;
+    color: #6366f1; /* Dark Violet Gamer Accent */
     font-weight: 800;
     font-size: 0.75rem;
     text-transform: uppercase;
@@ -55,13 +56,13 @@ body {
 }
 
 .nav-link:hover {
-    color: #0891b2;
-    background-color: rgba(6, 182, 212, 0.08);
+    color: #6366f1;
+    background-color: rgba(99, 102, 241, 0.08);
 }
 
 .nav-link.active {
     color: #ffffff;
-    background: linear-gradient(135deg, #06b6d4, #56cdfc); 
+    background: linear-gradient(135deg, #6366f1, #4f46e5); /* Sleek Deep Violet Gradient */
 }
 
 hr {
@@ -75,11 +76,11 @@ hr {
 }
 
 .hero-card, .info-card, .form-card {
-    background: transparent;
-    padding: 0;
-    border: none;
-    box-shadow: none;
-    margin-bottom: 70px;
+    background: #ffffff; /* Nilagyan ng puting solid card background para lumitaw ang mga cards mo */
+    padding: 40px;
+    border-radius: 24px;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 35px;
 }
 
 .hero-avatar-box {
@@ -92,7 +93,7 @@ hr {
     width: 110px;
     height: 110px;
     border-radius: 35px 10px 35px 10px; 
-    border: 3px solid #06b6d4;
+    border: 3px solid #6366f1; /* Tinanggal ang cyan border at ginawang violet */
     object-fit: cover;
 }
 
@@ -129,7 +130,7 @@ hr {
 }
 
 .hobby-item:hover {
-    border-color: #8441db; 
+    border-color: #6366f1; 
     background-color: #ffffff;
 }
 
@@ -161,7 +162,7 @@ hr {
 
 .form-group label {
     font-weight: 700;
-    color: #0891b2;
+    color: #6366f1; /* Violet text headers para sa form inputs */
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -187,12 +188,12 @@ hr {
 .responsive-form textarea:focus {
     outline: none;
     background-color: #ffffff;
-    border-color: #0f172a; 
+    border-color: #6366f1; 
 }
 
 /* Action submit button configuration */
 .btn-submit {
-    background: linear-gradient(90deg, #42a1af, #78a8cf); 
+    background: linear-gradient(90deg, #6366f1, #4f46e5); /* Matte Tech Dark Purple to Indigo Gradient */
     color: #ffffff;
     border: none;
     border-radius: 12px;
@@ -206,6 +207,7 @@ hr {
     transition: opacity 0.2s ease;
 }
 
+/* Fixed fix: Fixed structural hover character anomaly */
 .btn-submit:hover {
     opacity: 0.9; 
 }
@@ -237,4 +239,22 @@ hr {
     color: #94a3b8;
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+/* Centering configurations for the contact page */
+.form-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;     
+}
+
+.form-card .page-title,
+.form-card .form-intro {
+    text-align: center;       
+    width: 100%;
+}
+
+.responsive-form {
+    margin: 0 auto;         
+    width: 100%;             
 }
