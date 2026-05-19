@@ -1,0 +1,234 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #ffffff; 
+    background-image: radial-gradient(at 100% 0%, rgba(6, 182, 212, 0.05) 0px, transparent 40%);
+    color: #0f172a;
+    line-height: 1.6;
+    padding: 60px 20px;
+}
+
+
+.site-header {
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+}
+
+.header-container {
+    background-color: #f8fafc;
+    border-radius: 100px;    
+    padding: 8px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-label {
+    color: #0891b2;
+    font-weight: 800;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.main-nav {
+    display: flex;
+    gap: 6px;
+}
+
+.nav-link {
+    color: #475569;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 10px 22px;
+    border-radius: 100px; 
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #0891b2;
+    background-color: rgba(6, 182, 212, 0.08);
+}
+
+.nav-link.active {
+    color: #ffffff;
+    background: linear-gradient(135deg, #06b6d4, #56cdfc); 
+}
+
+hr {
+    display: none; 
+}
+
+.content-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-card, .info-card, .form-card {
+    background: transparent;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    margin-bottom: 70px;
+}
+
+.hero-avatar-box {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+}
+
+.profile-avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 35px 10px 35px 10px; 
+    border: 3px solid #06b6d4;
+    object-fit: cover;
+}
+
+.page-title {
+    color: #0f172a;
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+}
+
+.hero-text, .section-intro, .form-intro {
+    color: #475569;
+    font-size: 1.1rem;
+    text-align: left;
+    max-width: 680px;
+    margin-bottom: 30px;
+}
+
+
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.hobby-item {
+    background-color: #f8fafc;
+    border-radius: 20px 4px 20px 4px;
+    padding: 30px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+}
+
+.hobby-item:hover {
+    border-color: #8441db; 
+    background-color: #ffffff;
+}
+
+.hobby-item h3 {
+    color: #0f172a;
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.hobby-item p {
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+.responsive-form {
+    display: flex;
+    flex-direction: column;
+    gap: 28px; 
+    max-width: 600px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: 700;
+    color: #0891b2;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.responsive-form input[type="text"],
+.responsive-form input[type="email"],
+.responsive-form select,
+.responsive-form textarea {
+    width: 100%;
+    background-color: #f8fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px; 
+    padding: 14px 18px;
+    font-size: 15px;
+    font-family: inherit;
+    color: #0f172a;
+    transition: all 0.2s ease;
+}
+
+.responsive-form input:focus,
+.responsive-form select:focus,
+.responsive-form textarea:focus {
+    outline: none;
+    background-color: #ffffff;
+    border-color: #0f172a; 
+}
+
+
+.btn-submit {
+    background: linear-gradient(90deg, #42a1af, #78a8cf); 
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 16px;
+    width: 100%;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.btn-submit:hover {
+    opacity: 0.9; 
+}
+
+@media screen and (min-width: 650px) {
+    .header-container {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 8px 12px 8px 24px;
+    }
+
+    .hobbies-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.site-footer {
+    max-width: 800px;
+    margin: 80px auto 0 auto;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 24px;
+    text-align: left;
+}
+
+.site-footer p {
+    font-size: 12px;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
