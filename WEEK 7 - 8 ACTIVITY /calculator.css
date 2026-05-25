@@ -1,1 +1,92 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #d8e6f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
 
+/* Calculator Body Container */
+.calculator {
+    background-color: #3f464d;
+    padding: 30px 22px;
+    border-radius: 25px;
+    width: 320px;
+    box-sizing: border-box;
+}
+
+/* Screen Wrapper to contain both the numbers and the operator symbol */
+.calculator-screen-wrapper {
+    background-color: #e0e0e0; /* Light grey display area */
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 25px;
+    min-height: 125px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+/* Active Operator Indicator (Aligned to Upper Right) */
+.operator-display {
+    color: #ff9f0a; /* Orange theme color */
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: right; /* Aligns the operator symbol to the right side */
+    height: 30px;
+    padding-right: 5px;
+}
+
+/* Main Screen Display for Inputted Numbers (Aligned to Lower Right) */
+.calculator-screen {
+    color: #000000;
+    font-size: 3.5rem;
+    text-align: right;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+/* Grid Layout Configured for 4 Columns */
+.calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+/* Neumorphic Styled Buttons */
+.btn {
+    height: 56px;
+    width: 100%;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #333e4a;
+    color: #a2b0bc;
+    box-shadow: 4px #242c34, -4px #425060;
+    transition: all 0.15s ease;
+}
+
+/* Hover state styling */
+.btn:hover {
+    color: #ffffff;
+}
+
+/* Active pressed state (Creates a sunken button effect) */
+.btn:active {
+    box-shadow: inset 3px 3px 6px #242c34, inset -3px -3px 6px #425060;
+}
+
+/* Color accents for functional and operator keys */
+.special-btn, .op-btn, .equal-btn {
+    color: #ff9f0a;
+}
+
+/* Spans the equal button across 3 grid columns */
+.equal-btn {
+    grid-column: span 3;
+}
