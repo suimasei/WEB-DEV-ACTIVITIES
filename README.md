@@ -4,7 +4,7 @@ Welcome to my personal student profile project repository! This repository showc
 
 ---
 
-## 🎮 Project Overview
+## 💻 Project Overview
 
 This repository serves as a compilation of my Web Development coursework, assignments, and terminal assessments. The core project features a minimalist, gaming-inspired student profile website built with clean code practices and responsive structures.
 
