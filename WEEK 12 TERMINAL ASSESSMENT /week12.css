@@ -1,0 +1,179 @@
+/* GLOBAL STYLES */
+body {
+    background-color: #0b0c10;
+    color: #e0e0e0; /* Increased brightness of gray for overall legibility */
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+h1, h2, .navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+}
+
+.italic-text {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: #a0a0a0 !important;
+}
+
+/* Adjusting text that is too dark beside the Album Art */
+.text-muted {
+    color: #b0b3b8 !important; 
+}
+
+.album-title {
+    color: #ffffff !important;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: rgba(11, 12, 16, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navbar-brand {
+    letter-spacing: 2px;
+    color: #ffffff !important;
+}
+
+.nav-link {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    color: #b0b3b8 !important;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #66fcf1 !important;
+}
+
+/* HERO / ALBUM ART */
+.album-art-container {
+    position: relative;
+    max-width: 400px;
+}
+
+.album-art-container img {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.5s ease;
+}
+
+/* BUTTONS */
+.btn-custom {
+    background-color: transparent !important;
+    color: #ffffff !important;
+    border: 1px solid #ffffff !important;
+    border-radius: 0;
+    padding: 10px 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #ffffff !important;
+    color: #0b0c10 !important;
+}
+
+/* TRACKLIST SECTION */
+.bg-dark-variant {
+    background-color: #12141c;
+}
+
+.section-title {
+    color: #ffffff !important;
+}
+
+/* Fixed Card Design (Prevents plain white fallback) */
+.track-card {
+    background-color: #1a1d24 !important; /* Dark background color for the card */
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 4px;
+    color: #ffffff !important;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.track-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    border-color: #66fcf1 !important; /* Adds a neon cyan glow on hover */
+}
+
+/* Track number and title color styling */
+.track-card .text-success {
+    color: #dd8f1bd0 !important; /* High-contrast layout for the title text */
+}
+
+.track-card .card-text {
+    color: #b0b3b8 !important; /* Enhanced readability for the track description */
+}
+
+/* Preview Button Custom Fix */
+.track-card .play-btn {
+    border-color: rgba(255, 255, 255, 0.3) !important;
+    color: #ffffff !important;
+    border-radius: 0;
+    transition: all 0.2s ease;
+}
+
+.track-card .play-btn:hover {
+    background-color: #ffffff !important;
+    color: #0b0c10 !important;
+}
+
+/* FORMS */
+.input-custom {
+    background-color: #1f2833;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border-radius: 0;
+    padding: 12px;
+}
+
+.input-custom:focus {
+    background-color: #1f2833;
+    border-color: #ffffff;
+    color: #ffffff;
+    box-shadow: none;
+}
+
+/* MODAL */
+.modal-content {
+    background-color: #12141c;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border-radius: 0;
+}
+
+.max-width-button {
+    max-width: 300px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .album-title {
+        font-size: 2.5rem;
+    }
+}
+
+.input-custom {
+    background-color: #1c1f26 !important; 
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff !important; 
+    border-radius: 4px !important;
+    font-size: 0.95rem;
+}
+
+.input-custom::placeholder {
+    color: #9aa0a6 !important;
+    opacity: 1 !important; 
+}
+
+.input-custom:focus {
+    border-color: #ffffff !important;
+    background-color: #22262f !important;
+    box-shadow: none !important;
+}
