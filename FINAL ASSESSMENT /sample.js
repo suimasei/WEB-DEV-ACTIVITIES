@@ -82,7 +82,7 @@ const artistData = {
     artistValue: "Keshi",
     cards: [
       { 
-        title: "Skeletons EP", 
+        title: "skeletons EP", 
         text: "The foundational bedroom-pop tracks that defined his signature atmospheric aesthetic.", 
         img: "keshi1.png", 
         link: "https://open.spotify.com/album/14IZ6aHadzsKrNMnntwLb0?si=3luLfTCiT_-GlLWSHZM_ig" 
