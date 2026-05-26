@@ -1,18 +1,26 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     
+    // 1. Fetch and trim inputs to remove accidental whitespaces
     $name    = trim($_POST['fullName'] ?? '');
     $email   = trim($_POST['email'] ?? '');
     $subject = trim($_POST['subject'] ?? '');
     $message = trim($_POST['message'] ?? '');
     $artist  = trim($_POST['selectedArtist'] ?? 'Our Artist Network');
 
-    if (empty($name) || empty($email) || empty($subject) || empty($message) || strlen($message) < 20) {
+    // 2. Server-side Validation (Now includes strict email checking)
+    if (
+        empty($name) || 
+        empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL) || 
+        empty($subject) || 
+        empty($message) || strlen($message) < 20
+    ) {
         ?>
         <!DOCTYPE html>
         <html lang="en">
         <head>
             <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Server Validation Failure</title>
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
         </head>
@@ -20,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <div class="container text-center">
                 <div class="card bg-danger border-0 shadow-lg mx-auto p-4" style="max-width: 600px;">
                     <h4 class="fw-bold">⚠️ Server-Side Verification Failure</h4>
-                    <p class="mb-3">The data packet submission process was rejected by the local server. Ensure all fields are properly populated and your main message contains at least 20 characters.</p>
+                    <p class="mb-3">The data packet submission process was rejected by the local server. Ensure all fields are properly populated, a valid email address is provided, and your main message contains at least 20 characters.</p>
                     <hr class="border-light">
                     <a href="index.html" class="btn btn-light rounded-pill px-4">← Return to Form</a>
                 </div>
@@ -31,6 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         exit(); 
     }
 
+    // 3. Sanitization for Output Display (XSS Protection)
     $clean_name    = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');
     $clean_email   = htmlspecialchars($email, ENT_QUOTES, 'UTF-8');
     $clean_subject = htmlspecialchars($subject, ENT_QUOTES, 'UTF-8');
