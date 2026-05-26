@@ -1,0 +1,205 @@
+/* ==========================================================================
+   PART A: OVERRIDE AT LEAST TWO BOOTSTRAP VARIABLES (CUSTOM COLOR IDENTITY)
+   ========================================================================== */
+:root {
+  --bs-primary: #3b82f6;         
+  --bs-primary-rgb: 59, 130, 246;
+  --bs-body-bg: #090d16;         
+  --bs-card-bg: #111827; 
+  --bs-font-size-base: 1.02rem; /* Override variable base size requirement */
+}
+
+/* 🌟 DYNAMIC ARTIST PALETTES, INNER COLORS, & BUTTON HOOKS
+   Changes structural accents, inner container panels, and background color properties */
+body.theme-member1 { 
+  --bs-primary: #3b82f6;           /* Blue - SWS */
+  --bs-primary-rgb: 59, 130, 246; 
+  --bs-body-bg: #0d1527;           
+  --bs-card-bg: #13203a;           /* Inner Background: Slate Navy */
+} 
+body.theme-member2 { 
+  --bs-primary: #a855f7;           /* Purple - J. Cole */
+  --bs-primary-rgb: 168, 85, 247; 
+  --bs-body-bg: #110818; 
+  --bs-card-bg: #1e0f2b;           /* Inner Background: Deep Wine Purple */
+} 
+body.theme-member3 { 
+  --bs-primary: #f59e0b;           /* Amber/Gold - Keshi */
+  --bs-primary-rgb: 245, 158, 11; 
+  --bs-body-bg: #140d04; 
+  --bs-card-bg: #26190b;           /* Inner Background: Dark Roasted Amber */
+} 
+body.theme-member4 { 
+  --bs-primary: #10b981;           /* Emerald Green - The 1975 */
+  --bs-primary-rgb: 16, 185, 129; 
+  --bs-body-bg: #051410; 
+  --bs-card-bg: #0b261f;           /* Inner Background: Forest Moss Green */
+} 
+
+/* ==========================================================================
+   DYNAMIC BUTTON ENGINE (SOLID & OUTLINE STATES)
+   Overrides default Bootstrap coloring with active variable configurations
+   ========================================================================== */
+
+/* 1. SOLID BUTTONS (.btn-primary - e.g., Hero Button, Modal Submit Button) */
+.btn-primary {
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+  color: #ffffff !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.btn-primary:hover, 
+.btn-primary:focus, 
+.btn-primary:active {
+  background-color: rgba(var(--bs-primary-rgb), 0.85) !important;
+  border-color: rgba(var(--bs-primary-rgb), 0.85) !important;
+  box-shadow: 0 0 15px rgba(var(--bs-primary-rgb), 0.6) !important;
+  transform: translateY(-2px);
+}
+
+/* 2. OUTLINE BUTTONS (.btn-outline-primary - e.g., Card Buttons) */
+.btn-outline-primary {
+  border: 1.5px solid var(--bs-primary) !important;
+  color: var(--bs-primary) !important;
+  background-color: transparent !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.btn-outline-primary:hover, 
+.btn-outline-primary:focus, 
+.btn-outline-primary:active {
+  background-color: var(--bs-primary) !important;
+  color: #ffffff !important;
+  border-color: var(--bs-primary) !important;
+  box-shadow: 0 0 15px rgba(var(--bs-primary-rgb), 0.5) !important;
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   LAYOUT, CARDS, AND STRUCTURAL SYSTEM SETTINGS
+   ========================================================================== */
+body {
+  background-color: var(--bs-body-bg) !important;
+  color: #f8fafc;
+  transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bg-dark-card {
+  background-color: var(--bs-card-bg) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: background-color 0.5s ease, border-color 0.5s ease;
+}
+
+.bg-dark-card.border {
+  border: 1.5px solid var(--bs-primary) !important; 
+}
+
+/* CARDS STYLING GRID HOOKS */
+.card {
+  background-color: var(--bs-card-bg) !important;
+  border: 1.5px solid rgba(var(--bs-primary-rgb), 0.4) !important;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--bs-primary) !important;
+  box-shadow: 0 12px 24px rgba(var(--bs-primary-rgb), 0.25) !important;
+}
+
+.card-img-custom {
+  height: 240px;
+  object-fit: cover;
+}
+
+/* JUMBOTRON / UI ELEMENTS CONFIGS */
+.text-accent-muted {
+  color: var(--bs-primary) !important;
+  transition: color 0.5s ease;
+}
+
+.text-subtitle-clear {
+  color: #f1f5f9 !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.text-muted-custom {
+  color: #cbd5e1 !important; 
+}
+
+.text-shadow-strong {
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.95), 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.max-w-600 { max-width: 600px; }
+
+.hero-section {
+  min-height: 55vh;
+  padding: 100px 0;
+  transition: background 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+.section-title {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background-color: var(--bs-primary);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: background-color 0.4s ease;
+}
+
+.nav-pills .nav-link {
+  color: #cbd5e1 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.nav-pills .nav-link.active {
+  background-color: var(--bs-primary) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(var(--bs-primary-rgb), 0.4);
+  border-color: transparent;
+}
+
+.bg-secondary-dark { background-color: #1f2937 !important; }
+.bg-black { background-color: #030712 !important; }
+
+/* CUSTOM FOOTER OVERRIDE - FORCE SOLID WHITE TEXT COLOR */
+.custom-footer-title {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+/* ==========================================================================
+   PART B: BOOTSTRAP VISUAL VALIDATION INDICATORS HOOKS
+   ========================================================================== */
+.was-validated .form-control:invalid {
+  border-color: #ef4444 !important; /* Crimson Red state borders */
+  background-image: none !important;
+  box-shadow: 0 0 0 0.25rem rgba(239, 68, 68, 0.2) !important;
+}
+
+.was-validated .form-control:invalid ~ .invalid-feedback {
+  display: block !important;
+}
+
+.was-validated .form-control:valid {
+  border-color: #10b981 !important; /* Emerald Green state borders */
+  background-image: none !important;
+  box-shadow: 0 0 0 0.25rem rgba(16, 185, 129, 0.15) !important;
+}
