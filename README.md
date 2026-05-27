@@ -37,7 +37,8 @@ This repository serves as a compilation of my Web Development coursework, assign
 
 ---
 
-🚀 Local Deployment Guide (XAMPP Environment Setup)
+## 🚀 Local Deployment Guide (XAMPP Environment Setup)
+
 To fully experience the application—including dynamic style swapping, auto-loading states, and secure server-side form submission directly into a relational database—you must run this project within a real Apache and MySQL server environment.
 
 [!WARNING]
