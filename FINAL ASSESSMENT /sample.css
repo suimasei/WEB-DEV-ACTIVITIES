@@ -78,7 +78,7 @@ body.theme-member4 {
 
 /* ==========================================================================
    LAYOUT, CARDS, AND STRUCTURAL SYSTEM SETTINGS
-   ========================================================================== */
+   ========================================================================= */
 body {
   background-color: var(--bs-body-bg) !important;
   color: #f8fafc;
@@ -186,8 +186,30 @@ body {
 }
 
 /* ==========================================================================
-   PART B: BOOTSTRAP VISUAL VALIDATION INDICATORS HOOKS
+   PART B: BOOTSTRAP VISUAL VALIDATION INDICATORS HOOKS & FORM VISIBILITY
    ========================================================================== */
+
+/* Force readability for input text boxes and typed contents */
+.form-control {
+  color: #ffffff !important;               /* Text color when typing */
+  background-color: #1a233a !important;       /* Input background area color */
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+/* ⚠️ VISIBILITY FIX: Brightens placeholder text so 'John Doe' is instantly visible */
+.form-control::placeholder {
+  color: #cbd5e1 !important;               /* Light Off-White/Gray placeholder value */
+  opacity: 1 !important;                   /* Force override to discard default transparency rules */
+}
+
+/* State configuration when the textbox is currently selected/active */
+.form-control:focus {
+  color: #ffffff !important;
+  background-color: #24304f !important;
+  border-color: var(--bs-primary) !important; 
+  box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25) !important;
+}
+
 .was-validated .form-control:invalid {
   border-color: #ef4444 !important; /* Crimson Red state borders */
   background-image: none !important;
