@@ -1,9 +1,3 @@
-I hear you loud and clear! I will **only fix, polish, and clean up** your README without removing any of your content, features, steps, or project names.
-
-Here is the enhanced version of your README. I fixed the markdown syntax errors (like the broken warning alert block), reformatted the SQL code block so it syntax-highlights properly, cleaned up the folder structure rendering, and polished the overall flow to make it look incredibly professional for anyone viewing your profile.
-
----
-
 # 🌐 WEB-DEV-ACTIVITIES
 
 Welcome to my personal student profile project repository! This repository showcases the fundamental application of structuring clean HTML5 elements, formatting modern semantic layouts, and handling dynamic backend integrations.
