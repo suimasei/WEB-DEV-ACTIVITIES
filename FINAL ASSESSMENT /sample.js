@@ -77,8 +77,7 @@ const artistData = {
 };
 
 // ==========================================================================
-// 1. DEDICATED ARCHITECTURE RENDERING FUNCTION (DITO BINAGO)
-// Gagawa tayo ng iisang function para mag-inject ng data kahit walang pumipindot
+// 1. DEDICATED ARCHITECTURE RENDERING FUNCTION 
 // ==========================================================================
 function renderArtistWorkspace(memberKey) {
   const data = artistData[memberKey];
@@ -175,8 +174,7 @@ contactForm.addEventListener('submit', function(event) {
 }, false);
 
 // ==========================================================================
-// 4. THE ULTIMATE RUN-ON-START LOAD SEQUENCE (ANG PINAKALUNAS)
-// Titiyakin nito na sa unang bukas pa lang, load agad ang variables ni member1
+// 4. THE ULTIMATE RUN-ON-START LOAD SEQUENCE 
 // ==========================================================================
 document.addEventListener("DOMContentLoaded", function() {
   renderArtistWorkspace('member1');
